@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Suppress 404 logs for Chrome DevTools probe
+RewriteRule ^\.well-known/appspecific/com\.chrome\.devtools\.json$ - [R=204,L]
+
+# Your existing redirect for tool access
+RewriteCond %{QUERY_STRING} request_access=1&tool_id=([0-9]+)
+RewriteRule ^dashboard\.php$ /tool-%1/ [R=302,L]
