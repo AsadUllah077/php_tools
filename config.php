@@ -37,7 +37,7 @@ define('AMEMBER_API_URL', 'https://app.toolsworlds.com/api');
 define('AMEMBER_WEBHOOK_SECRET', bin2hex(random_bytes(16)));
 
 // === Domain Configuration ===
-define('MAIN_DOMAIN', 'toolsworlds.com'); // Remove scheme; keep domain only
+define('MAIN_DOMAIN', 'betfastwallet.com'); // Remove scheme; keep domain only
 define('TOOLS_SUBDOMAIN_PATTERN', 'tool0%d.' . MAIN_DOMAIN);
 define('ALLOWED_DOMAINS', serialize([
     'https://' . MAIN_DOMAIN,
