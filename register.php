@@ -119,14 +119,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo->commit();
             
             // Send verification email
-            $verification_link = "https://" . MAIN_DOMAIN . "/verify.php?token=" . urlencode($verification_token);
+            // $verification_link = "https://" . MAIN_DOMAIN . "/verify.php?token=" . urlencode($verification_token);
+                $verification_link = "localhost:3000/verify.php?token=" . urlencode($verification_token);
                 $mail = new PHPMailer(true);
                 try {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'hilal.ahmad.developer@gmail.com';
-                    $mail->Password = 'fqxgnngiwwtgupsk';
+                    $mail->Username = 'asadullah03189051077@gmail.com';
+                    $mail->Password = 'ztbyxmsjxzadisjt';
                     // $mail->Encryption = 'tls';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;

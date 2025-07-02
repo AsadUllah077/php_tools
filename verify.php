@@ -11,7 +11,7 @@ if (empty($token)) {
 
 try {
     // Check if token exists and is not expired
-    $stmt = $pdo->prepare("SELECT id FROM users WHERE verification_token = ? AND verification_expires > NOW()");
+    $stmt = $pdo->prepare("SELECT id FROM users WHERE verification_token = ? ");
     $stmt->execute([$token]);
     
     if ($stmt->rowCount() === 0) {

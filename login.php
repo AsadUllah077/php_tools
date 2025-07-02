@@ -6,6 +6,14 @@ if (isset($_SESSION['user_id'])) {
     header('Location: dashboard.php');
     exit;
 }
+if (isset($_SESSION['error'])) {
+    echo $_SESSION['error'];
+    // exit;
+}
+if (isset($_SESSION['success'])) {
+    echo $_SESSION['success'];
+    // exit;
+}
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
