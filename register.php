@@ -119,8 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo->commit();
             
             // Send verification email
-            $verification_link = "https://" . MAIN_DOMAIN . "/verify.php?token=" . urlencode($verification_token);
-                // $verification_link = "betfastwallet.com/verify.php?token=" . urlencode($verification_token);
+            // $verification_link = "https://" . MAIN_DOMAIN . "/verify.php?token=" . urlencode($verification_token);
+                $verification_link = "localhost:3000/verify.php?token=" . urlencode($verification_token);
                 $mail = new PHPMailer(true);
                 try {
                     $mail->isSMTP();

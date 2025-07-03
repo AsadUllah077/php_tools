@@ -20,7 +20,6 @@ define('SECRET_KEY', bin2hex(random_bytes(32))); // Dynamically generated for ea
 define('COOKIE_EXPIRY', 7200); // 2 hours in seconds
 define('MIN_QUERY_INTERVAL', 3); // Minimum seconds between queries
 
-
 define('MAX_QUERY_INTERVAL', 5); // Maximum seconds between queries
 define('CSRF_TOKEN_LIFETIME', 3600); // 1 hour
 
@@ -37,7 +36,7 @@ define('AMEMBER_API_URL', 'https://app.toolsworlds.com/api');
 define('AMEMBER_WEBHOOK_SECRET', bin2hex(random_bytes(16)));
 
 // === Domain Configuration ===
-define('MAIN_DOMAIN', 'betfastwallet.com'); // Remove scheme; keep domain only
+define('MAIN_DOMAIN', 'toolsworlds.com'); // Remove scheme; keep domain only
 define('TOOLS_SUBDOMAIN_PATTERN', 'tool0%d.' . MAIN_DOMAIN);
 define('ALLOWED_DOMAINS', serialize([
     'https://' . MAIN_DOMAIN,

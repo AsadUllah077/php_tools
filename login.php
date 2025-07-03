@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
         header('Location: dashboard.php');
         exit;
     } else {
-        die("fsdfsdf");
+        // die("fsdfsdf");
         $error = "Invalid email or password";
     }
 }
